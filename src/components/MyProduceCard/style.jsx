@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
   /* margin: 80px auto 30px 120px; */
   width: 40vw;
   height: 300px;

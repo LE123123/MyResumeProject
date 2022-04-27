@@ -13,7 +13,7 @@ export const Container = styled.section`
 
   @media ${({ theme }) => theme.tablet} {
     flex-direction: column;
-    height: 130vh;
+    height: 110vh;
   }
 `;
 
@@ -29,7 +29,7 @@ export const Sidebar = styled.aside`
   transition: all ease 0.5s;
   @media ${(props) => props.theme.tablet} {
     width: 100vw;
-    height: 35vh;
+    height: 100%;
     row-gap: 30px;
   }
 `;
@@ -128,6 +128,10 @@ export const SubTitle = styled.span`
   @media ${(props) => props.theme.tablet} {
     font-size: 40px;
   }
+
+  @media ${(props) => props.theme.mobile} {
+    font-size: 28px;
+  }
 `;
 
 export const Title = styled.span`
@@ -136,6 +140,10 @@ export const Title = styled.span`
 
   @media ${(props) => props.theme.tablet} {
     font-size: 70px;
+  }
+
+  @media ${(props) => props.theme.tablet} {
+    font-size: 38px;
   }
 `;
 
@@ -153,6 +161,10 @@ export const BodyText = styled.div`
   @media ${(props) => props.theme.tablet} {
     font-size: 23px;
   }
+
+  @media ${(props) => props.theme.mobile} {
+    font-size: 14px;
+  }
 `;
 
 export const ImageBox = styled.div`
@@ -160,7 +172,7 @@ export const ImageBox = styled.div`
   left: 20%;
   top: 0;
   opacity: 0.5;
-  width: 100vw;
+  width: 100%;
 
   img {
     z-index: 1;

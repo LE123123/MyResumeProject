@@ -26,11 +26,15 @@ export const Contents = styled.article`
 
 export const ExperienceContainer = styled.article`
   display: flex;
-  width: 100%;
+  width: 80vw;
   flex-direction: column;
   row-gap: 70px;
   margin-top: 70px;
   margin-bottom: 100px;
+
+  @media ${(props) => props.theme.mobile} {
+    row-gap: 55px;
+  }
 `;
 
 export const ExperienceCard = styled.article`
@@ -40,16 +44,33 @@ export const ExperienceCard = styled.article`
   position: relative;
   width: ${DESKTOP_CONTENT_WIDTH};
   background-color: rgb(245, 245, 245);
+
+  @media ${(props) => props.theme.tablet} {
+    width: 80vw;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    width: 80vw;
+    row-gap: 15px;
+  }
 `;
 
 export const ExperienceCardTitleType = styled.span`
   font-size: 24px;
+
+  @media ${(props) => props.theme.mobile} {
+    font-size: 20px;
+  }
 `;
 
 export const ExperienceCardTitle = styled.h2`
   font-size: 45px;
   font-family: ${BOLD_TEXT};
   margin: 0;
+
+  @media ${(props) => props.theme.mobile} {
+    font-size: 32px;
+  }
 `;
 
 export const ExperienceCardTitleImage = styled.img`
@@ -66,6 +87,10 @@ export const ExperienceCardTitleContainer = styled.div`
 
 export const ExperienceCardPeriod = styled.span`
   font-size: 18px;
+
+  @media ${(props) => props.theme.mobile} {
+    font-size: 16px;
+  }
 `;
 
 export const ExperienceCardExplainContainer = styled.article`

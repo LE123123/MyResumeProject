@@ -10,9 +10,14 @@ export const Container = styled.div`
   /* justify-content: space-between; */
   row-gap: 10px;
   padding: 20px;
-  margin: auto;
-  width: 209.4px;
-  height: 60vh;
+  /* margin: auto; */
+  margin-left: 20px;
+  width: 18vw;
+  height: 100vh;
+
+  border-right: 1px solid #c7c7c7;
+
+  transition: all 0.5s ease;
 `;
 
 export const AnchorContainer = styled.div`

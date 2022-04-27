@@ -173,6 +173,7 @@ export const ImageBox = styled.div`
   top: 0;
   opacity: 0.5;
   width: 100%;
+  overflow: hidden;
 
   img {
     z-index: 1;

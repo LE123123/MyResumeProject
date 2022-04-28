@@ -7,8 +7,11 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyle from "#/styles/globalStyles";
 import { theme } from "#/styles/theme";
 
+import smoothscroll from "smoothscroll-polyfill";
+
 gsap.registerPlugin(CSSPlugin);
 gsap.registerPlugin(ScrollTrigger);
+smoothscroll.polyfill();
 
 function MyApp({ Component, pageProps }) {
   return (

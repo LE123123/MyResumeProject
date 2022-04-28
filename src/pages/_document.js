@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import { renderToString } from "react-dom/server";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -17,6 +18,7 @@ class MyDocument extends Document {
       <Html>
         <Head />
         <title>Hyunseo&apos;s Resume</title>
+        {this.props.styleTags}
         <meta property="og:description" content="고웹프 프로젝트입니다."></meta>
         <meta
           property="op:image"

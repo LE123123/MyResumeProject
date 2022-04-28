@@ -1,9 +1,15 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import { ServerStyleSheet } from "styled-components";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
+    const sheet = new ServerStyleSheet();
+    const page = ctx.renderPage(
+      (App) => (props) => sheet.collectStyles(<App {...props} />)
+    );
+    const styleTags = sheet.getStyleElement();
+    return { ...initialProps, ...page, styleTags };
   }
 
   render() {
@@ -25,7 +31,7 @@ class MyDocument extends Document {
           rel="stylesheet"
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
-        <meta charset="utf-8"></meta>
+        <meta charSet="utf-8"></meta>
         <body className="bg-white">
           <Main />
           <NextScript />

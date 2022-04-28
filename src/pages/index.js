@@ -15,14 +15,6 @@ const Section = styled.section`
 export default function Home() {
   return (
     <>
-      <Head>
-        <meta property="og:description" content="고웹프 프로젝트입니다."></meta>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        />
-      </Head>
-
       <main>
         <Section>
           <Introduce />

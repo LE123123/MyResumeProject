@@ -9,9 +9,11 @@ import { theme } from "#/styles/theme";
 
 import smoothscroll from "smoothscroll-polyfill";
 
-gsap.registerPlugin(CSSPlugin);
-gsap.registerPlugin(ScrollTrigger);
-smoothscroll.polyfill();
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(CSSPlugin);
+  gsap.registerPlugin(ScrollTrigger);
+  smoothscroll.polyfill();
+}
 
 function MyApp({ Component, pageProps }) {
   return (
